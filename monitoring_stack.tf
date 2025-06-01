@@ -4,8 +4,8 @@ resource "helm_release" "prometheus" {
   chart      = "kube-prometheus-stack"
   version    = "52.1.0"
 
-  namespace = "monitoring"
-  create_namespace = true
+  namespace         = "monitoring"
+  create_namespace  = true
 
   set {
     name  = "grafana.persistence.enabled"
